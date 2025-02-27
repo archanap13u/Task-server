@@ -13,7 +13,7 @@ TaskManagementServer.use(cors())
 TaskManagementServer.use(express.json())
 TaskManagementServer.use(route)
 
-const PORT=3000 || process.env.PORT
+const PORT=5000 || process.env.PORT
 
 TaskManagementServer.listen(PORT,()=>{
     console.log("server is running at:",PORT)
