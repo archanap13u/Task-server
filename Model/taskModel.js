@@ -11,8 +11,8 @@ const taskSchema=new mongoose.Schema({
         
     },
     team: [{ 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: "users" 
+        type:String, 
+        
     }], 
     status:{
         type:String
