@@ -4,6 +4,7 @@ const userController=require('../Controller/userController')
 const AdminController=require('../Controller/AdminController')
 const { addAccount, getAccounts, getAccountById, updateAccount, deleteAccount } = require('../Controller/accountController');
 const { addTask,getTasks,updateTaskStatus } = require('../Controller/taskController');
+const { upload } = require('../Middlewares/multerMiddleware');
 // const jwt=require('../Middlewares/jwtMiddleware')
 
 const router=express.Router()
@@ -14,7 +15,7 @@ router.post('/log',userController.userLogin)
 
 
 ///accounts
-router.post('/addAccount',  addAccount);
+router.post('/addAccount', upload.single('image'), addAccount);
 router.get('/account', getAccounts);
 router.get('/account/:id', getAccountById);
 router.put('/account/:id',  updateAccount);

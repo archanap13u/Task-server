@@ -9,8 +9,9 @@ const accountSchema = new mongoose.Schema({
         type: String,
        
     },
-    bill: {
+    image: {
         type: String,
+        required: true,
     },
     date: {
         type: Date,
